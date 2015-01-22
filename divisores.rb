@@ -17,12 +17,19 @@ end
 
 puts "Los divisores de #{num} son #{divisores}"
 
-# Si es primo solo tiene 2 divisores: 1 y él mismo.
+# Se agrega condición de no-primo para 1
 
-if divisores.size>2
+if num == 1
+
 	puts "#{num} no es un número primo."
 else
-	puts "#{num} es un número primo."
+	# Si es primo solo tiene 2 divisores: 1 y él mismo.
+
+	if divisores.size>2
+		puts "#{num} no es un número primo."
+	else
+		puts "#{num} es un número primo."
+	end
 end
 
 #Se le resta el mismo numero para que solo queden los divisores<num
